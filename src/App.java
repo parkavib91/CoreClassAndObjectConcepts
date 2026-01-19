@@ -46,6 +46,26 @@ public class App {
                     OverloadingMethod();
                     break;
 
+                case 10:
+                    OverridingMethod();
+                    break;
+
+                case 11:
+                    SuperKeyword();
+                    break;
+
+                case 12:
+                    This();
+                    break;
+
+                case 13:
+                    StaticKeyword();
+                    break;
+
+                case 14:
+                    AccessModifier();
+                    break;
+                        
                 default:
                     System.out.println("Enter the correct choice");
                     break;
@@ -62,6 +82,11 @@ public class App {
         System.out.println("7. DataHiding In Class");
         System.out.println("8. Polymorphism In Class");
         System.out.println("9. OverloadingMethod In Class");
+        System.out.println("10. OverridingMethod In Class");
+        System.out.println("11. Super Keyword");
+        System.out.println("12. This Keyword In Class");
+        System.out.println("13. Static keyword in class");
+        System.out.println("14. AccessModifier");
     }
 
     private static void AbstractClass(Scanner scanner){
@@ -97,6 +122,7 @@ public class App {
 
         a = new Cow();
         a.sound();  
+        
     }
 
     private static void AbstractionInClass(){
@@ -114,8 +140,9 @@ public class App {
     }
 
     private static void Polymorphism(){
-        Person p = new Father();
-        p.role();
+       
+     System.out.println(Helper.Multiply(2, 4));
+        System.out.println(Helper.Multiply(5.5, 6.3));
     }
 
     private static void OverloadingMethod(){
@@ -134,7 +161,37 @@ public class App {
         // Printing product of 3 numbers
         System.out.println(
             "Product of the three integer value: " + prod2);
-    }
+        }
+
+private static void OverridingMethod(){
+     Parent obj = new Child();
+        obj.show();   
+
+}
+
+private static void SuperKeyword(){
+        Car small = new Car();
+        small.display();
+}
+
+private static void This(){
+      Number object = new Number(25 , 30);
+      object.display();
+}  
+
+private static void StaticKeyword(){
+        
+        Student s1 = new Student(101, "Ravi");
+        Student s2 = new Student(102, "Amit");
+
+        s1.display();
+        s2.display();
+    }  
+private static void AccessModifier(){
+  Person p = new Person();
+        p.setName("Alice");
+        System.out.println(p.getName());
+}
 
     private static void ExecuteSingleton(){
         SingletonClass x = SingletonClass.getInstance();
